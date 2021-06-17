@@ -3,21 +3,10 @@ On GPD win Max with Manjaro 20.x.x, Run all steps
 On GPD win 2 with Manjaro 20.x.x, Run only Finally
 
 ## First
+Patch grub
 
 ```bash
-sudo mkdir -p /lib/firmware/edid
-```
-## Second
-
-```bash
-sudo echo "AP///////wAJ5QMAAwAAAAEdAQOACxF4LwAAoFdJmyYQSE8AAAABAQEBAQEBAQEBAQEBAQEBwhogUDAAEFAQEDIAbKwAAAAYAAAA/ABUVjA4MFdVTS1OTDAKAAAA/QA8PBAQBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMM=" | base64 --decode > /lib/firmware/edid/gpdwinmax.bin
-```
-## Third
-
-Add in etc/default/grub
-
-```bash
-video=eDP-1:800x1280 drm.edid_firmware=eDP-1:edid/gpdwinmax.bin fbcon=rotate:1
+sudo ./grub.sh
 ```
 ## Finally
 Run script to change touch orientation.
