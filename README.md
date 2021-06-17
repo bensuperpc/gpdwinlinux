@@ -1,6 +1,7 @@
 # GPD
-On GPD win Max with Manjaro 20.x.x, Run all steps
-On GPD win 2 with Manjaro 20.x.x, Run only Finally
+On GPD win Max, run all steps
+
+On GPD win 2, run only Finally
 
 ## First
 Patch grub
